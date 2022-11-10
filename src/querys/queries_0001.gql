@@ -1,0 +1,18 @@
+
+#pega todos os usuarios de um array
+query GET_USERS {
+  users {
+    id
+    name
+    age
+  }
+}
+
+#pega um usuario só
+query GET_USER {
+  user {
+    id
+    name
+    age
+  }
+}
