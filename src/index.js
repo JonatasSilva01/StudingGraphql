@@ -18,7 +18,7 @@ const server = new ApolloServer({
       age: () => 21,
       average: () => 50.55,
       married: () => false,
-      car: () => ['gol-bolinha', 'gol-quadrado'],
+      car: () => ['gol-bolinha', 'gol-quadrado', 'mustang-GC500'],
     },
   },
 });
