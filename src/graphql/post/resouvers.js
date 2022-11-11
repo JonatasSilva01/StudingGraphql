@@ -1,29 +1,13 @@
-const post = () => {
-  return {
-    id: 'abcse-135',
-    title: 'pagina de consulta',
-    page: 1,
-  };
+const posts = async (_, __, { fetch }) => {
+  const response = await fetch('http://localhost:3000/posts');
+  return response.json();
 };
 
-const posts = () => {
-  return [
-    {
-      id: 'abcse-135',
-      title: 'pagina de consulta',
-      page: 1,
-    },
-    {
-      id: 'abcse-100',
-      title: 'pagina de contato',
-      page: 2,
-    },
-    {
-      id: 'abcse-100',
-      title: 'livraria',
-      page: 3,
-    },
-  ];
+const post = async (_, { id }, { fetch }) => {
+  const response = await fetch(`http://localhost:3000/posts/${id}`);
+  const post = response.json();
+  console.log(post);
+  return post;
 };
 
 export const postResouvers = {

@@ -1,0 +1,33 @@
+query GET_USER {
+  user(id: 111) {
+    id
+    firstName
+    lastName
+    userName
+    indexRef
+    createdAt
+  }
+}
+
+query GET_POST {
+  post(id: 342) {
+    id
+    title
+  }
+}
+
+query GET_USERS {
+  users {
+    id
+    firstName
+  }
+}
+
+query GET_POSTS {
+  posts {
+    id
+    title
+    body
+  }
+}
+
