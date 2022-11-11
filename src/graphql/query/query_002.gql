@@ -1,0 +1,16 @@
+query GET_POST($id: ID! $teste: Boolean!) {
+  post(
+    id: $id
+    teste: $teste
+    ) {
+      id
+      title
+  }
+}
+
+# como o fontr ira pegar esses dados
+# VARIEBLES
+#   {
+#     "id": "860",
+#     "teste": true,
+#   }
